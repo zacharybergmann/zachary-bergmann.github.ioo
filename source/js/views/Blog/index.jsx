@@ -1,5 +1,20 @@
 import React, { Component } from 'react';
 
+const blogs = [
+  {
+    title: 'Using TravisCI for continuous integration to GitHub organizations',
+    publishedDate: 'June 6, 2017',
+    image: '',
+    file: 'travis_ci_continuous_gh.md',
+  },
+  {
+    title: 'Using Sequelize ORM to manage relationships in a PostgreSQL database',
+    publishedDate: 'May 30, 2017',
+    image: '',
+    file: './blogs/sequelize_w_postgres.md',
+  },
+];
+
 export default class Blog extends Component {
   render() {
     return (

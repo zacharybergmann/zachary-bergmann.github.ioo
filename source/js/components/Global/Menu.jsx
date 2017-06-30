@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { routeCodes } from '../../views/App';
-import workAndCoLogoImg from '../../../assets/img/workco-logo.svg';
+import logo from '../../../assets/img/logo.png';
 
 export default class Menu extends Component {
   render() {
@@ -9,8 +9,8 @@ export default class Menu extends Component {
       <div className='Menu'>
         <div className='Menu-logo'>
           <img
-            src={ workAndCoLogoImg }
-            alt='Work & Co logo'
+            src={ logo }
+            alt='Zachary Bergmann Logo'
           />
         </div>
         <div className='Menu-links'>
@@ -57,3 +57,4 @@ export default class Menu extends Component {
     );
   }
 }
+

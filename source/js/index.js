@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import 'babel-polyfill';
 import logger from 'dev/logger';
-
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import rootReducer from 'reducers';
 
 import App from 'views/App';
@@ -48,6 +48,7 @@ if (isProduction) {
   );
 }
 
+injectTapEventPlugin();
 
 // Render it to DOM
 ReactDOM.render(
