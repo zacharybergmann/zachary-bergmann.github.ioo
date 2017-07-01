@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 export default class BlogPost extends Component {
   constructor(props) {
     super(props);
-    this.handleBlogClick = this.handleBlogClick.bind(this);
-  }
-  handleBlogClick(e) {
-    console.dir(e.target, 'this is event in handleBlogClick');
-    const target = e.target;
   }
   render() {
     const style = {

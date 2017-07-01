@@ -8,21 +8,16 @@ const style = {
   },
 };
 
-export default class Project extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div style={style.container}>
-        <h1>Material-UI</h1>
-        <h2>example project</h2>
-        <RaisedButton
-          label='See this app live!'
-          secondary={true}
-          href={`${props.project.deployedUrl}`}
-        />
-      </div>
-    );
-  }
-}
+const Project = (props) => (
+  <div style={ style.container }>
+    <h1>Material-UI</h1>
+    <h2>example project</h2>
+    <RaisedButton
+      label='See this app live!'
+      secondary={ true }
+      href={ `${ props.project.deployedUrl }` }
+    />
+  </div>
+);
+
+export default Project;

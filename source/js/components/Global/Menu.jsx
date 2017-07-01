@@ -4,6 +4,9 @@ import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import { routeCodes } from '../../views/App';
 
 export default class Menu extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>

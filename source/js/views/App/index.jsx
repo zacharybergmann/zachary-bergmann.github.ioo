@@ -30,7 +30,7 @@ export const routeCodes = {
   BLOGSTORY: `${ publicPath }blogstory/:id`,
 };
 
-const blogs = [
+export const blogs = [
   {
     id: 1,
     title: 'Something about TravisCI',
@@ -43,8 +43,37 @@ const blogs = [
   },
 ];
 
-export default class App extends Component {
+export const projects = [
+  {
+    name: 'LangSnap',
+    deployedUrl: 'http://www.github.com',
+    image: './images/bargainhound.jpg',
+    description: 'A customizable language learning experience focused on transitioning from phrases to fluency',
+  },
+  {
+    name: 'Bargain Hound',
+    deployedUrl: 'http://bargainhound.zacharybergmann.com',
+    image: './images/bargainhound.jpg',
+    description: 'Identifying publicly traded stocks that may be a bargain',
+  },
+  {
+    name: 'Spork',
+    deployedUrl: 'http://www.github.com',
+    image: './images/spork.jpg',
+    description: 'Sharing leftovers with friends to create delicious meals with a social atmosphere'
+  },
+  {
+    name: 'PickUp',
+    deployedUrl: 'http://pickup.zacharybergmann.com',
+    image: './images/pickup_how_to.jpg',
+    description: 'An internet and text interface for joining and creating pick-up sports games',
+  },
+];
 
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <MuiThemeProvider muiTheme={ muiTheme }>
@@ -54,10 +83,10 @@ export default class App extends Component {
             <div className='Page'>
               <Switch>
                 <Route exact path={ publicPath } component={ Dashboard } />
-                <Route path={ routeCodes.BLOG } component={ Blog } />
+                <Route exact path={ routeCodes.BLOG } component={ Blog } />
                 <Route path={ routeCodes.ABOUT } component={ About } />
                 <Route path={ routeCodes.PROJECTS } component={ Projects } />
-                <Route path={ routeCodes.BLOGSTORY } component={ BlogStory } blogs={ blogs } />
+                <Route path={ routeCodes.BLOGSTORY } component={ BlogStory } />
               </Switch>
             </div>
           </div>
