@@ -1,60 +1,59 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import { routeCodes } from '../../views/App';
-import logo from '../../../assets/img/logo.png';
 
 export default class Menu extends Component {
   render() {
     return (
-      <div className='Menu'>
-        <div className='Menu-logo'>
-          <img
-            src={ logo }
-            alt='Zachary Bergmann Logo'
-          />
-        </div>
-        <div className='Menu-links'>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            exact
-            to={ routeCodes.DASHBOARD }
+      <div>
+        <Toolbar>
+          <ToolbarGroup
+            style={ {
+              float: 'right',
+              marginLeft: 'auto',
+            } }
           >
-            Home
+            <NavLink
+              activeClassName='Menu-link--active'
+              className='Menu-link'
+              exact
+              to={ routeCodes.DASHBOARD }
+            >
+              Home
+            </NavLink>
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <NavLink
+              activeClassName='Menu-link--active'
+              className='Menu-link'
+              to={ routeCodes.ABOUT }
+            >
+              About
           </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            to={ routeCodes.ABOUT }
-          >
-            About
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <NavLink
+              activeClassName='Menu-link--active'
+              className='Menu-link'
+              exact
+              to={ routeCodes.BLOG }
+            >
+              Blog
           </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            exact
-            to={ routeCodes.BLOG }
-          >
-            Blog
+          </ToolbarGroup>
+          <ToolbarGroup>
+            <NavLink
+              activeClassName='Menu-link--active'
+              className='Menu-link'
+              exact
+              to={ routeCodes.PROJECTS }
+            >
+              Projects
           </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            exact
-            to={ routeCodes.PROJECTS }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            to='404'
-          >
-            404
-          </NavLink>
-        </div>
+          </ToolbarGroup>
+        </Toolbar>
       </div>
     );
   }
 }
-
