@@ -59,6 +59,7 @@
     "isomorphic-fetch": "^2.2.1",
     "material-ui": "^0.18.5",
     "material-ui-community-icons": "^0.15.0",
+    "mui": "0.0.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

@@ -142,12 +142,12 @@ button:hover {
 }
 
 .Page {
-  max-width: 60rem;
+  max-width: 150rem;
   margin: 0 auto;
 
-  @include lg {
-    margin: 0 0 0 20rem;
-  }
+  // @include lg {
+  //   margin: 0 0 0 20rem;
+  // }
 }
 
 .Example {

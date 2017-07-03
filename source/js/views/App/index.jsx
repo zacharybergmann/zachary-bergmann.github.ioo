@@ -8,12 +8,15 @@ import Menu from 'components/Global/Menu';
 import BlogStory from 'views/BlogStory';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { deepPurple500, teal100, grey800 } from 'material-ui/styles/colors';
 
 const publicPath = '/';
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: '#3f51b5',
+    primary1Color: teal100,
+    primary2Color: grey800,
+    accent1Color: deepPurple500,
   },
 });
 
@@ -78,7 +81,7 @@ export default class App extends Component {
     return (
       <MuiThemeProvider muiTheme={ muiTheme }>
         <BrowserRouter>
-          <div style={ style } className='App'>
+          <div className='App'>
             <Menu />
             <div className='Page'>
               <Switch>
